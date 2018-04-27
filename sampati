@@ -1,0 +1,146 @@
+#include<Servo.h>
+Servo BeakServo; // Servomotor for beak servo
+Servo EyesServo; // Servo Motor for Eyes Servo
+Servo NeckServo;// Servo For Neck movement
+
+unsigned long previousMillis = 0;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  BeakServo.attach(1);// attach teh servo for perticular pin
+  EyesServo.attach(2);
+  NeckServo.attach(3);
+  WingsServo.attach(4);
+}
+void AllMovements(int onTime, int offTime, int repeat, int Delay1, Delay2); // Function to all movements i.e. beak,eyes,neck
+void EyesMovment(deg);
+void loop() {
+  unsigned long currentMillis = millis();
+  if (10 < currentMillis < 20) {
+
+
+    AllMovements(50, 60, 2, 150, 200);// AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+    EyesMovment(90);// eye opens half way and closes.
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+    AllMovements(onTime, offTime, repeat, Delay1, Delay2)
+  }
+  if (10 < currentMillis < 20) {
+
+  }
+
+}
+
+void AllMovements(onTime, offTime, repeat, Delay1, Delay2) {
+  WingsServo.write(onTime);
+  delay(Delay1);
+  WingsServo.write(offTIme);
+  delay(Delay2)
+  BeakServo.write(onTime);
+  delay(Delay1);
+  BeakServo.write(offTime);
+  delay(Delay2);
+  NeckServo.write(onTime);
+  delay(Delay1);
+  NeckServo.write(offTime);
+  delay(Delay2);
+  //EyesServo.
+
+
+}
+void EyesMovment(deg) {
+  for (pos = 0; pos <= deg; pos += 1) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    Eyeservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+  for (pos = deg; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+    Eyeservo.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(15);                       // waits 15ms for the servo to reach the position
+  }
+}
